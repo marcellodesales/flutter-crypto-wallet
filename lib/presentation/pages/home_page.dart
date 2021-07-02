@@ -34,13 +34,13 @@ class _HomePageState extends State<HomePage> {
                 });
               },
             ),
-      backgroundColor: const Color(0XFFF3A00FF),
+      backgroundColor: const Color(0XFF6F42C1),
       body: isDesktop
           ? CollapsibleSidebar(
               items: [
                 CollapsibleItem(
-                  text: 'Mis balances',
-                  icon: Icons.home_filled,
+                  text: 'Carteira',
+                  icon: Icons.account_balance_wallet_outlined,
                   onPressed: () {
                     setState(() {
                       _pos = 0;
@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
                   isSelected: _pos == 0,
                 ),
                 CollapsibleItem(
-                    text: 'Precios',
+                    text: 'Mercado',
                     icon: Icons.equalizer,
                     onPressed: () {
                       setState(() {
@@ -64,9 +64,9 @@ class _HomePageState extends State<HomePage> {
               ),
               avatarImg: const AssetImage('assets/profile.jpeg'),
               backgroundColor: Colors.white,
-              title: 'Josue Erazo',
-              selectedIconColor: const Color(0XFFF01FFB2),
-              selectedTextColor: const Color(0XFFF01FFB2),
+              title: 'Marcello de Sales',
+              selectedIconColor: Colors.white,
+              selectedTextColor: Colors.white,
               unselectedTextColor: Colors.black87,
               textStyle: TextStyle(fontSize: 26.sp),
               titleStyle: TextStyle(
@@ -96,7 +96,9 @@ class _BottomNavigationBar extends StatelessWidget {
         backgroundColor: Colors.white,
         initialActiveIndex: initialPage,
         items: const [
-          TabItem(icon: Icon(Icons.home_filled)),
+          TabItem(
+            icon: Icon(Icons.account_balance_wallet_outlined)
+          ),
           TabItem(
             icon: Icon(Icons.equalizer),
           )

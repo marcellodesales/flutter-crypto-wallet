@@ -45,7 +45,8 @@ class _SuccessContent extends StatefulWidget {
 }
 
 class __SuccessContentState extends State<_SuccessContent> {
-  final _color = const Color(0XFFF3A00FF);
+  // Main content background for supercash wallet
+  final _color = const Color(0XFF6F42C1);
   bool visibility = true;
 
   @override
@@ -73,7 +74,7 @@ class __SuccessContentState extends State<_SuccessContent> {
                     color: Colors.white,
                     fontSize: 46.sp,
                     fontWeight: FontWeight.bold)),
-            firstChild: Text('Mi Portafolio',
+            firstChild: Text('Supercash Wallet',
                 maxLines: 1,
                 textAlign: TextAlign.center,
                 style: TextStyle(
@@ -184,7 +185,7 @@ class _HeaderSection extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text('En mi Billetera',
+                      Text('Em Minha Carteira',
                           style: TextStyle(
                               color: Colors.grey,
                               fontSize: 22.sp,
@@ -218,9 +219,9 @@ class _HeaderSection extends StatelessWidget {
             context.router.push(ConvertRoute());
           },
           child: PhysicalModel(
-            shadowColor: Colors.white,
+            shadowColor: Colors.purple,
             elevation: 4,
-            color: const Color(0XFFF01FFB2),
+            color: Colors.white,
             borderRadius: BorderRadius.circular(25),
             child: Container(
               alignment: Alignment.center,
@@ -231,17 +232,17 @@ class _HeaderSection extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Icon(
-                    Icons.sync_alt,
-                    color: const Color(0XFFF3A00FF),
+                    Icons.sync_rounded,
+                    color: const Color(0XFF6F42C1),
                     size: 35.h,
                   ),
                   SizedBox(
                     width: 10.w,
                   ),
-                  Text('Convertir',
+                  Text('Converter',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                          color: const Color(0XFFF3A00FF),
+                          color: const Color(0XFF6F42C1),
                           fontSize: 32.sp,
                           fontWeight: FontWeight.bold)),
                 ],

@@ -22,7 +22,7 @@ class ConvertPage extends StatefulWidget {
 }
 
 class _ConvertPageState extends State<ConvertPage> {
-  final _color = const Color(0xfff3a00ff);
+  final _color = const Color(0XFF6F42C1);
 
   late AnimationController animateController;
 
@@ -37,7 +37,7 @@ class _ConvertPageState extends State<ConvertPage> {
         },
         child: Consumer(builder: (context, watch, child) {
           final state = watch(coinConvertNotifierProvider);
-          final msg1 = '${Utils.getPrice(state.from!.dollars!)} disponible';
+          final msg1 = '${Utils.getPrice(state.from!.dollars!)} disponível';
           return state.isLoading
               ? Scaffold(
                   body: Center(
@@ -61,7 +61,7 @@ class _ConvertPageState extends State<ConvertPage> {
                     ),
                     title: Column(
                       children: [
-                        Text('Convertir ${state.from!.name}',
+                        Text('Converter ${state.from!.name}',
                             maxLines: 1,
                             textAlign: TextAlign.center,
                             style: TextStyle(
@@ -109,16 +109,16 @@ class _ConvertPageState extends State<ConvertPage> {
                               state.validation.fold(
                                   () =>
                                       // ignore: prefer_interpolation_to_compose_strings
-                                      'Tienes ' +
+                                      'Tens ' +
                                       Utils.getCoinAmount(state.from!.amount!,
                                           state.from!.symbol) +
-                                      ' disponible.', (validation) {
+                                      ' disponível.', (validation) {
                                 animateController.repeat();
                                 return validation.map(
-                                    empty: (_) => 'Ingrese una cantidad mayor',
+                                    empty: (_) => 'Digite uma quantidade maior',
                                     invalid: (_) =>
                                         // ignore: prefer_interpolation_to_compose_strings
-                                        'No tienes suficientes ' +
+                                        'Saldo Insuficiente de ' +
                                         state.from!.symbol.toUpperCase());
                               }),
                               maxLines: 1,
@@ -140,7 +140,8 @@ class _ConvertPageState extends State<ConvertPage> {
                             height: 60.h,
                           ),
                           RoundButton(
-                            text: 'Previsualizar Conversión',
+                            text: 'Revisar Conversão',
+                            color: const Color(0XFF6F42C1),
                             onTap: () {
                               context
                                   .read(coinConvertNotifierProvider.notifier)
@@ -198,7 +199,7 @@ class _ExchangeCoin extends StatelessWidget {
                 ),
                 _CoinColum(
                   aligment: CrossAxisAlignment.start,
-                  title: 'Desde',
+                  title: 'De',
                   subtitle: from.symbol,
                 ),
               ],
@@ -242,7 +243,7 @@ class _ExchangeCoin extends StatelessWidget {
               children: [
                 _CoinColum(
                   aligment: CrossAxisAlignment.end,
-                  title: 'A',
+                  title: 'Para',
                   subtitle: to.symbol,
                 ),
                 SizedBox(

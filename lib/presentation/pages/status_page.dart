@@ -23,7 +23,7 @@ class StatusPage extends ConsumerWidget {
             height: 300.h,
             width: 300.h,
             child: Lottie.asset(
-              'assets/dollar_animation.json',
+              'assets/blockchain_animation.json',
             )),
         (either) => either.fold(
           (l) => Column(mainAxisAlignment: MainAxisAlignment.center, children: [
@@ -63,7 +63,8 @@ class StatusPage extends ConsumerWidget {
               ),
             ),
             RoundButton(
-              text: 'Reintentar',
+              text: 'Tentar Novamente',
+              color: const Color(0XFF6F42C1),
               onTap: () {
                 context.router.popUntilRouteWithName('ConvertRoute');
               },
@@ -87,7 +88,7 @@ class StatusPage extends ConsumerWidget {
                             'assets/done_animation.json',
                           )),
                       Text(
-                        'Transacción Exitosa',
+                        'Transação Efetuada',
                         style: TextStyle(
                             color: Colors.black87,
                             fontSize: 42.sp,
@@ -97,7 +98,7 @@ class StatusPage extends ConsumerWidget {
                         height: 20.h,
                       ),
                       Text(
-                        'Es tu plata, simple',
+                        'É seu dinheiro, simples!',
                         style:
                             TextStyle(color: Colors.black87, fontSize: 36.sp),
                       ),
@@ -105,7 +106,8 @@ class StatusPage extends ConsumerWidget {
                   ),
                 ),
                 RoundButton(
-                  text: 'Aceptar',
+                  text: 'Aceitar',
+                  color: const Color(0XFF6F42C1),
                   onTap: () {
                     context.router.popUntilRouteWithName('HomeRoute');
                   },

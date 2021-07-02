@@ -34,7 +34,7 @@ class PortafolioPage extends StatelessWidget {
           icon: const Icon(Icons.arrow_back_ios),
           onPressed: () => Navigator.pop(context),
         ),
-        title: Text('Seleccione un asset',
+        title: Text('Selecione uma moeda',
             maxLines: 1,
             textAlign: TextAlign.center,
             style: TextStyle(

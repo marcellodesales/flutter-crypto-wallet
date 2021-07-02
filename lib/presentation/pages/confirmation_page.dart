@@ -10,7 +10,7 @@ import '../../presentation/routes/router.gr.dart';
 
 class ConfirmationPage extends StatelessWidget {
   const ConfirmationPage({Key? key}) : super(key: key);
-  final _color = const Color(0XFFF3A00FF);
+  final _color = const Color(0XFF6F42C1);
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class ConfirmationPage extends StatelessWidget {
               icon: const Icon(Icons.arrow_back_ios),
               onPressed: () => Navigator.pop(context),
             ),
-            title: Text('Vista previa del pedido',
+            title: Text('Previsao atual de conversão',
                 maxLines: 1,
                 textAlign: TextAlign.center,
                 style: TextStyle(
@@ -65,9 +65,9 @@ class ConfirmationPage extends StatelessWidget {
                   SizedBox(
                     height: 15.h,
                   ),
-                  _RowItem(title: 'Pagar con', subtitle: state.from!.name),
+                  _RowItem(title: 'Pagando com', subtitle: state.from!.name),
                   _RowItem(
-                      title: 'Tipo de cambio',
+                      title: 'Tipo de troca',
                       // ignore: prefer_interpolation_to_compose_strings
                       subtitle: '1 ' +
                           state.from!.symbol.toUpperCase() +
@@ -75,7 +75,7 @@ class ConfirmationPage extends StatelessWidget {
                           state.confirm!.rate.toStringAsFixed(10) +
                           ' ' +
                           state.to!.symbol.toUpperCase()),
-                  const _RowItem(title: 'Tarifa de Belo', subtitle: '\$0.00'),
+                  const _RowItem(title: 'Taxa da Supercash', subtitle: '\$0.00'),
                   _RowItem(
                       title: 'Total',
                       // ignore: prefer_interpolation_to_compose_strings
@@ -91,7 +91,8 @@ class ConfirmationPage extends StatelessWidget {
                     ),
                   ),
                   RoundButton(
-                    text: 'Convertir ahora',
+                    text: 'Converter agora',
+                    color: const Color(0XFF6F42C1),
                     onTap: () {
                       context.read(coinConvertNotifierProvider.notifier).save();
                       context.router.replace(const StatusRoute());

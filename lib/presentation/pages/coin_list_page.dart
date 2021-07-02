@@ -48,7 +48,7 @@ class SuccesContent extends StatelessWidget {
           backgroundColor: Colors.white,
           centerTitle: true,
           title: Image.asset(
-            'assets/belo.png',
+            'assets/supercash-icon.png',
             height: 150.h,
           ),
         ),
