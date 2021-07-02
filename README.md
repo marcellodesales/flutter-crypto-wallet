@@ -71,4 +71,5 @@ crypto-wallet_1  | Starting server on port 4040 ...
 [very_good_analysis_link]:  https://pub.dev/packages/very_good_analysis
 
 [profile_link]:  https://www.linkedin.com/in/erazo-josue/
+[marcello_profile_link]:  https://www.linkedin.com/in/marcellodesales/
 [license_badge]:  https://img.shields.io/badge/license-MIT-blue.svg
